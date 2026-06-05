@@ -1,0 +1,7 @@
+mlx-lm>=0.29
+datasets>=2.0
+pandas>=2.0
+scipy>=1.10
+tqdm>=4.0
+matplotlib>=3.7
+google-genai>=1.0

@@ -1,0 +1,22 @@
+family,benchmark,model,zero_shot,best_strategy,best_acc,prompt_uplift_pp,vs_next_size_up
+Llama-3,gsm8k,llama-1b,5.7,cot,6.3,0.6,✗ below llama-3b zero-shot (10.8)
+Llama-3,gsm8k,llama-3b,10.8,cot,73.2,62.4,✓ matches/beats llama-8b zero-shot (20.7)
+Llama-3,gsm8k,llama-8b,20.7,cot,81.5,60.8,
+Llama-3,mmlu,llama-1b,31.2,structured,42.2,11.0,✗ below llama-3b zero-shot (52.7)
+Llama-3,mmlu,llama-3b,52.7,structured,56.7,4.0,✗ below llama-8b zero-shot (62.5)
+Llama-3,mmlu,llama-8b,62.5,structured,64.0,1.5,
+Llama-3,sst2,llama-1b,64.8,structured,73.2,8.4,✗ below llama-3b zero-shot (88.7)
+Llama-3,sst2,llama-3b,88.7,structured,89.7,1.0,✗ below llama-8b zero-shot (92.0)
+Llama-3,sst2,llama-8b,92.0,structured,92.2,0.2,
+Qwen2.5-Instruct,gsm8k,qwen-0.5b,3.2,cot,26.7,23.5,✓ matches/beats qwen-1.5b zero-shot (3.2)
+Qwen2.5-Instruct,gsm8k,qwen-1.5b,3.2,cot,57.7,54.5,✓ matches/beats qwen-3b zero-shot (2.5)
+Qwen2.5-Instruct,gsm8k,qwen-3b,2.5,cot,72.3,69.8,✓ matches/beats qwen-7b zero-shot (14.7)
+Qwen2.5-Instruct,gsm8k,qwen-7b,14.7,cot,89.0,74.3,
+Qwen2.5-Instruct,mmlu,qwen-0.5b,35.3,zero_shot,35.3,0.0,✗ below qwen-1.5b zero-shot (54.7)
+Qwen2.5-Instruct,mmlu,qwen-1.5b,54.7,structured,57.0,2.3,✗ below qwen-3b zero-shot (60.3)
+Qwen2.5-Instruct,mmlu,qwen-3b,60.3,structured,60.5,0.2,✗ below qwen-7b zero-shot (72.2)
+Qwen2.5-Instruct,mmlu,qwen-7b,72.2,structured,73.5,1.3,
+Qwen2.5-Instruct,sst2,qwen-0.5b,60.2,few_shot,85.5,25.3,✓ matches/beats qwen-1.5b zero-shot (84.2)
+Qwen2.5-Instruct,sst2,qwen-1.5b,84.2,few_shot,91.0,6.8,✓ matches/beats qwen-3b zero-shot (79.7)
+Qwen2.5-Instruct,sst2,qwen-3b,79.7,structured,90.2,10.5,✓ matches/beats qwen-7b zero-shot (84.5)
+Qwen2.5-Instruct,sst2,qwen-7b,84.5,structured,94.0,9.5,
