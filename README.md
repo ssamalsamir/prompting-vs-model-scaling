@@ -1,4 +1,4 @@
-# Prompting Substitutes for Scale on Reasoning, but Not on Knowledge
+# Chain-of-Thought's Double Edge Is Model-Specific: Prompting versus Scale Across Two Model Families
 
 Code, prompts, and results for a controlled study of the **prompt–parameter exchange rate** —
 how much model scaling a prompting strategy can substitute for, and how that depends on the task.
@@ -17,15 +17,17 @@ Holm-adjusted McNemar tests.
 
 ## Key findings
 
-- **The exchange rate is largest on reasoning, smallest on knowledge** — the opposite of the naive
-  intuition. On GSM8K, chain-of-thought at a small size beats zero-shot at a much larger size
-  (Qwen-1.5B+CoT 55.7% > Qwen-7B zero-shot 14.3%; Llama-3B+CoT 74.7% > Llama-8B zero-shot 22.7%).
-  On MMLU, no strategy improves on zero-shot by more than a few points — scaling is the only lever.
-- **CoT is double-edged, and its cost is model-specific.** In Qwen, CoT *degrades* multiple-choice
-  knowledge QA by 6–17 pp (worse with scale); in Llama, CoT is neutral-to-helpful. Reported as
-  family-dependent, not universal.
-- Effects are robust to the scoring-artifact critique (continuous numeric-presence metric;
-  re-extraction from full outputs) and replicate across both seeds and both families.
+- **Primary finding — chain-of-thought's effect on knowledge is model-specific.** In Qwen2.5, CoT
+  *degrades* multiple-choice knowledge QA (MMLU) by 6–17 pp (worse with scale); in Llama-3, CoT is
+  neutral-to-helpful. The divergence is consistent across every size within each family — an
+  asymmetry a single-family study would miss. (With only two families, treated as an observation to
+  test more broadly, not a universal law.)
+- **Confirming prior work — prompting substitutes for scale on reasoning but not knowledge.**
+  Consistent with Sprague et al. (2024) and quantified here as a prompt–parameter exchange rate: on
+  GSM8K, CoT at a small size beats zero-shot at a much larger size (Qwen-1.5B+CoT 55.7% > Qwen-7B
+  zero-shot 14.3%; Llama-3B+CoT 74.7% > Llama-8B zero-shot 22.7%); on MMLU, no strategy beats scaling.
+- **Robustness.** Effects survive the scoring-artifact critique (continuous numeric-presence metric;
+  re-extraction from full outputs) and replicate across two seeds and two families.
 
 ## Repository layout
 
